@@ -38,7 +38,7 @@ const Product = ({ product }) => {
           </Card.Text>
           
           <Card.Text as='h5'>
-            <div className='my-1'>Price: ${product.price.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
+            <div className='my-1'>Price: ${product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </div>
           </Card.Text>
         </Card.Body>
